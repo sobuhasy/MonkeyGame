@@ -10,13 +10,17 @@ zookeeper.scale.y = 0.1;
 app.stage.addChild(zookeeper);
 
 gameInterval(function(){
-    const monkey = PIXI.Sprite.from('assets/monkey.png');
-    monkey.x = random(0, 1000);
+    const monkey = PIXI.Sprite.from('assets/ape' + random(1, 2) + '.png');
+    monkey.x = random(0, 850);
     monkey.y = -25;
     monkey.scale.x = 0.08;
     monkey.scale.y = 0.08;
     app.stage.addChild(monkey);
     flyDown(monkey, 1);
+
+    waitForCollision(zookeeper, monkey).then(function() {
+        stopGame();
+    })
 }, 1000);
 
 function leftKeyPressed(){
