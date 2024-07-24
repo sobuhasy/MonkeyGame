@@ -16,4 +16,15 @@ The gameplay is simple yet addictive:
 ## Getting Started
 To get started with MonkeyGame, clone this repository, open this project with MS Code, download the Live Server extension, right-click index.html, and choose "Open with Live Server"!
 
+```
+git clone https://github.com/sobuhasy/MonkeyGame
+cd MonkeyGame
+```
+
+Enjoy the game!
+
+## Acknowledgements
+This game was developed with the help of the tutorial "Spiel programmieren mit JavaScript ohne Vorkenntnisse" (in German) made by Junus from Developer Akademie https://developerakademie.com/
+
+
 
