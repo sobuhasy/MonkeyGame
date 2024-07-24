@@ -19,14 +19,24 @@ gameInterval(function(){
     flyDown(monkey, 1);
 
     waitForCollision(zookeeper, monkey).then(function() {
+        app.stage.removeChild(zookeeper);
         stopGame();
     })
-}, 1000);
-
+}, 2000);
+ 
 function leftKeyPressed(){
     zookeeper.x = zookeeper.x - 5;
 }
-
+ 
 function rightKeyPressed(){
     zookeeper.x = zookeeper.x + 5;
+}
+
+function spaceKeyPressed(){
+    const banana = PIXI.Sprite.from('assets/banana.png');
+    banana.x = zookeeper.x;
+    banana.y = zookeeper.y;
+    banana.scale.x = 0.06;
+    banana.scale.y = 0.06;
+    app.stage.addChild(banana);
 }
